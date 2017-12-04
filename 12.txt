@@ -1,0 +1,34 @@
+>> open cmd prompt in "rails_apps"
+
+//Create new rails application:
+>> rails -d mysql <pname>
+>> cd <pname>
+
+//Configure database:
+>> rake db:create:all 
+
+//Create Database Table:
+>> ruby script/generate scaffold bookinfo acct:integer title:string author:string edition:string pub:string
+ 
+//Createmigration
+>> rake db:migrate
+
+//StartWEBrickServer 
+>> ruby script/server
+
+//open in browser
+http://localhost:3000/bookinfos
+
+>> CTRL+C
+
+//create new controller called main
+>> ruby script/generate controller main
+//it creates "main_controller.rb" in /<pname>/app/controllers
+
+//Create "search.html.erb"  in /<pname>/app/views/main
+
+//modify "main_controller.rb" in /<pname>/app/controllers
+
+//Createa file called "search_book.html.erb" in /<pname>/app/views/main
+
+//goto URL "http://localhost:3000/main/search"

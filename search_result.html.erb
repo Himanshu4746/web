@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>search result</title>
+</head>
+<body bgcolor="lightgreen" >
+	<% if @data.length==0 %>
+		<h2>NO RESULT</h2>
+	<% else %>
+		<center>
+			<table border="1">
+				<tr>
+					<th>ACC NO</th>
+					<th>TITLE</th>
+					<th>AUTH</th>
+					<th>ED</th>
+					<th>PUB</th>
+				</tr>
+			<% @data.each do |temp| %>
+				<tr>
+					<td><%= temp.acct %></td>
+					<td><%= temp.title %></td>
+					<td><%= temp.author %></td>
+					<td><%= temp.edition %></td>
+					<td><%= temp.publisher %></td>
+				</tr>
+			<% end %>
+			</table>
+		</center>
+	<% end %>
+</body>
+</html>
